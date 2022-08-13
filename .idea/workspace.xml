@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d9d285e6-cf03-497b-a887-c40d5d3460ba" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DID05ANCsXmYE8KhUWcYAySO5z" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Dev/BookShop",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.CheckoutTests">
+    <configuration name="CheckoutTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshopautomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshopautomation" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckoutTests.checkoutItems_GivenBooksOver30Pounds_ShouldApplyOnTotalDiscountCost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshopautomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshopautomation" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
+      <option name="METHOD_NAME" value="checkoutItems_GivenBooksOver30Pounds_ShouldApplyOnTotalDiscountCost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckoutTests.checkoutItems_GivenMixtureOfBooks_ShouldApplyCorrectDiscountCost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshopautomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshopautomation" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
+      <option name="METHOD_NAME" value="checkoutItems_GivenMixtureOfBooks_ShouldApplyCorrectDiscountCost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckoutTests.checkoutItems_GivenMoreThanOneBookAfter2000_ShouldApplyOnYearDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshopautomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshopautomation" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
+      <option name="METHOD_NAME" value="checkoutItems_GivenMoreThanOneBookAfter2000_ShouldApplyOnYearDiscount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckoutTests.checkoutItems_GivenSingleBookAfter2000_ShouldApplyOnYearDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshopautomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshopautomation" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
+      <option name="METHOD_NAME" value="checkoutItems_GivenSingleBookAfter2000_ShouldApplyOnYearDiscount" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CheckoutTests" />
+        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenMoreThanOneBookAfter2000_ShouldApplyOnYearDiscount" />
+        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenSingleBookAfter2000_ShouldApplyOnYearDiscount" />
+        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenBooksOver30Pounds_ShouldApplyOnTotalDiscountCost" />
+        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenMixtureOfBooks_ShouldApplyCorrectDiscountCost" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9d285e6-cf03-497b-a887-c40d5d3460ba" name="Changes" comment="" />
+      <created>1660377481029</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660377481029</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BookShop$Main.ic" NAME="Main Coverage Results" MODIFIED="1660390459305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bookshopautomation.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/BookShop$CheckoutTests.ic" NAME="CheckoutTests Coverage Results" MODIFIED="1660403227699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.bookshopautomation.*</FILTER>
+    </SUITE>
+  </component>
+</project>
