@@ -17,6 +17,29 @@ public class Checkout {
   }
 
   public BigDecimal checkoutItems(List<Book> books) {
-    return null;
+    BigDecimal rawTotalPrice = getRawTotalPrice(books);
+    CheckoutOrder checkoutOrder = new CheckoutOrder(books, rawTotalPrice);
+
+    return calculateFinalTotalPrice(checkoutOrder).setScale(2, RoundingMode.DOWN);
+  }
+
+  private BigDecimal getRawTotalPrice(List<Book> books){
+    BigDecimal rawTotalPrice = BigDecimal.valueOf(00.00);
+
+    for (Book book : books) {
+      rawTotalPrice = rawTotalPrice.add(book.getPrice());
+    }
+
+    return rawTotalPrice;
+  }
+
+  private BigDecimal calculateFinalTotalPrice(CheckoutOrder checkoutOrder) {
+    List<Discount> discounts = discountProvider.getDiscounts();
+
+    for (Discount discount: discounts) {
+      checkoutOrder = discount.applyCondition(checkoutOrder);
+    }
+
+    return checkoutOrder.getTotalPrice();
   }
 }
