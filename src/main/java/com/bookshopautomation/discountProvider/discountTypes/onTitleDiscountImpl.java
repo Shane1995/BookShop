@@ -6,12 +6,11 @@ import com.bookshopautomation.models.Book;
 import com.bookshopautomation.models.CheckoutOrder;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 
-public class onTitleDiscountImpl implements Discount {
+public class onTitleDiscountImpl extends Discount {
 
   private String titleClause;
-  private int discountPercentage = 33;
+  private int discountPercentage;
 
   public onTitleDiscountImpl(String titleClause, int discountPercentage) {
     this.titleClause = titleClause;
@@ -37,11 +36,12 @@ public class onTitleDiscountImpl implements Discount {
 
     for (Book book: checkoutOrder.getItems()) {
       if (book.getTitle().equals(titleClause)){
-        deductibleDiscountTotal = deductibleDiscountTotal.add(book.getPrice().divide(BigDecimal.valueOf(discountPercentage),3, RoundingMode.HALF_DOWN));
+        BigDecimal deductibleAmount = super.calculateDeductibleDiscount(book.getPrice(), discountPercentage);
+        deductibleDiscountTotal = deductibleDiscountTotal.add(deductibleAmount);
       }
     }
 
-    BigDecimal updatedTotal = checkoutOrder.getTotalPrice().subtract(deductibleDiscountTotal);
+    BigDecimal updatedTotal = super.calculateUpdatedTotalCost(checkoutOrder.getTotalPrice(), deductibleDiscountTotal);
     return new CheckoutOrder(checkoutOrder.getItems(), updatedTotal);
   }
 }

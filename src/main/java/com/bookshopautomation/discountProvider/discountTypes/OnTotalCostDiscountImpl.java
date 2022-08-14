@@ -5,10 +5,10 @@ import com.bookshopautomation.discountProvider.validation.ValidatePercentage;
 import com.bookshopautomation.models.CheckoutOrder;
 import java.math.BigDecimal;
 
-public class OnTotalCostDiscountImpl implements Discount {
+public class OnTotalCostDiscountImpl extends Discount {
 
   private BigDecimal totalCostClause;
-  private int discountPercentage = 5;
+  private int discountPercentage;
 
   public OnTotalCostDiscountImpl(BigDecimal totalCostClause, int discountPercentage) {
     this.totalCostClause = totalCostClause;
@@ -34,10 +34,8 @@ public class OnTotalCostDiscountImpl implements Discount {
       return checkoutOrder;
     }
 
-    float percentage = discountPercentage/100f;
-
-    BigDecimal deductibleDiscount = checkoutOrder.getTotalPrice().multiply(BigDecimal.valueOf(percentage));
-    BigDecimal updatedTotal = checkoutOrder.getTotalPrice().subtract(deductibleDiscount);
+    BigDecimal deductibleDiscount = super.calculateDeductibleDiscount(checkoutOrder.getTotalPrice(), discountPercentage);
+    BigDecimal updatedTotal = super.calculateUpdatedTotalCost(checkoutOrder.getTotalPrice(), deductibleDiscount);
 
     return new CheckoutOrder(checkoutOrder.getItems(), updatedTotal);
   }
