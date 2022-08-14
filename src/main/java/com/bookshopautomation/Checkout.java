@@ -24,7 +24,7 @@ public class Checkout {
     return calculateFinalTotalPrice(checkoutOrder).setScale(2, RoundingMode.DOWN);
   }
 
-  private BigDecimal getRawTotalPrice(List<Book> books){
+  private BigDecimal getRawTotalPrice(List<Book> books) {
     BigDecimal rawTotalPrice = BigDecimal.valueOf(00.00);
 
     for (Book book : books) {
@@ -37,7 +37,7 @@ public class Checkout {
   private BigDecimal calculateFinalTotalPrice(CheckoutOrder checkoutOrder) throws DiscountPercentageException {
     List<Discount> discounts = discountProvider.getDiscounts();
 
-    for (Discount discount: discounts) {
+    for (Discount discount : discounts) {
       checkoutOrder = discount.applyCondition(checkoutOrder);
     }
 
