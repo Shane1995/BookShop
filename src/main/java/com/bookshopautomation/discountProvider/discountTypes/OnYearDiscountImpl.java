@@ -9,12 +9,12 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.Year;
 
-public class OnYearImpl implements Discount {
+public class OnYearDiscountImpl implements Discount {
 
   private Year yearClause;
   private int discountPercentage = 10;
 
-  public OnYearImpl(Year yearClause, int discountPercentage) {
+  public OnYearDiscountImpl(Year yearClause, int discountPercentage) {
     this.yearClause = yearClause;
     this.discountPercentage = discountPercentage;
   }

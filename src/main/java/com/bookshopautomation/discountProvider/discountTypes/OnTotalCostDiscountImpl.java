@@ -5,12 +5,12 @@ import com.bookshopautomation.discountProvider.validation.ValidatePercentage;
 import com.bookshopautomation.models.CheckoutOrder;
 import java.math.BigDecimal;
 
-public class OnTotalCostImpl implements Discount {
+public class OnTotalCostDiscountImpl implements Discount {
 
   private BigDecimal totalCostClause;
   private int discountPercentage = 5;
 
-  public OnTotalCostImpl(BigDecimal totalCostClause, int discountPercentage) {
+  public OnTotalCostDiscountImpl(BigDecimal totalCostClause, int discountPercentage) {
     this.totalCostClause = totalCostClause;
     this.discountPercentage = discountPercentage;
   }

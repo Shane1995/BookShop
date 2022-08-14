@@ -3,8 +3,8 @@ package com.bookshopautomation;
 import com.bookshopautomation.discountProvider.DiscountBookProviderImpl;
 import com.bookshopautomation.discountProvider.DiscountProvider;
 import com.bookshopautomation.discountProvider.discountTypes.Discount;
-import com.bookshopautomation.discountProvider.discountTypes.OnTotalCostImpl;
-import com.bookshopautomation.discountProvider.discountTypes.OnYearImpl;
+import com.bookshopautomation.discountProvider.discountTypes.OnTotalCostDiscountImpl;
+import com.bookshopautomation.discountProvider.discountTypes.OnYearDiscountImpl;
 import com.bookshopautomation.discountProvider.exceptions.DiscountPercentageException;
 import com.bookshopautomation.models.Book;
 import org.junit.Before;
@@ -36,7 +36,7 @@ public class CheckoutTests {
     book.add(new Book("The Terrible Privacy of Maxwell Sim", Year.parse("2010"), BigDecimal.valueOf(13.14)));
     book.add(new Book("Three Men in a Boat", Year.parse("1889"), BigDecimal.valueOf(12.87)));
 
-    Discount onYearDiscount = new OnYearImpl(Year.parse("2000"), 10);
+    Discount onYearDiscount = new OnYearDiscountImpl(Year.parse("2000"), 10);
     onYearDiscount.setDiscountPercentage(10);
 
     discountProvider.addDiscount(onYearDiscount);
@@ -60,7 +60,7 @@ public class CheckoutTests {
     book.add(new Book("Three Men in a Boat", Year.parse("1889"), BigDecimal.valueOf(12.87)));
     book.add(new Book("Great Expectations", Year.parse("1861"), BigDecimal.valueOf(13.21)));
 
-    Discount onTotalDiscount = new OnTotalCostImpl(BigDecimal.valueOf(30), 5);
+    Discount onTotalDiscount = new OnTotalCostDiscountImpl(BigDecimal.valueOf(30), 5);
     onTotalDiscount.setDiscountPercentage(5);
     onTotalDiscount.updateDiscountClause(BigDecimal.valueOf(30));
 
@@ -85,11 +85,11 @@ public class CheckoutTests {
     book.add(new Book("Three Men in a Boat", Year.parse("1889"), BigDecimal.valueOf(12.87)));
     book.add(new Book("Great Expectations", Year.parse("1861"), BigDecimal.valueOf(13.21)));
 
-    Discount onYearDiscount = new OnYearImpl(Year.parse("2000"), 10);
+    Discount onYearDiscount = new OnYearDiscountImpl(Year.parse("2000"), 10);
     onYearDiscount.updateDiscountClause(Year.parse("2000"));
     onYearDiscount.setDiscountPercentage(10);
 
-    Discount onTotalDiscount = new OnTotalCostImpl(BigDecimal.valueOf(30), 5);
+    Discount onTotalDiscount = new OnTotalCostDiscountImpl(BigDecimal.valueOf(30), 5);
     onTotalDiscount.setDiscountPercentage(5);
     onTotalDiscount.updateDiscountClause(BigDecimal.valueOf(30));
 
@@ -113,7 +113,7 @@ public class CheckoutTests {
     List<Book> book = new ArrayList<>();
     book.add(new Book("The Terrible Privacy of Maxwell Sim", Year.parse("2010"), BigDecimal.valueOf(24.69)));
 
-    Discount onYearDiscount = new OnYearImpl(Year.parse("2000"), 10);
+    Discount onYearDiscount = new OnYearDiscountImpl(Year.parse("2000"), 10);
     onYearDiscount.updateDiscountClause(Year.parse("2000"));
     onYearDiscount.setDiscountPercentage(10);
 
@@ -137,7 +137,7 @@ public class CheckoutTests {
     book.add(new Book("The Terrible Privacy of Maxwell Sim", Year.parse("2010"), BigDecimal.valueOf(24.69)));
     book.add(new Book("Harry Squatter", Year.parse("2011"), BigDecimal.valueOf(50.00)));
 
-    Discount onYearDiscount = new OnYearImpl(Year.parse("2000"), 10);
+    Discount onYearDiscount = new OnYearDiscountImpl(Year.parse("2000"), 10);
     onYearDiscount.updateDiscountClause(Year.parse("2000"));
     onYearDiscount.setDiscountPercentage(10);
 
@@ -161,7 +161,7 @@ public class CheckoutTests {
     book.add(new Book("The Terrible Privacy of Maxwell Sim", Year.parse("2010"), BigDecimal.valueOf(24.69)));
     book.add(new Book("Harry Squatter", Year.parse("2011"), BigDecimal.valueOf(50.00)));
 
-    Discount onYearDiscount = new OnYearImpl(Year.parse("2000"), 101);
+    Discount onYearDiscount = new OnYearDiscountImpl(Year.parse("2000"), 101);
 
     discountProvider.addDiscount(onYearDiscount);
 
@@ -183,7 +183,7 @@ public class CheckoutTests {
     book.add(new Book("The Terrible Privacy of Maxwell Sim", Year.parse("2010"), BigDecimal.valueOf(24.69)));
     book.add(new Book("Harry Squatter", Year.parse("2011"), BigDecimal.valueOf(50.00)));
 
-    Discount onYearDiscount = new OnYearImpl(Year.parse("2000"), -10);
+    Discount onYearDiscount = new OnYearDiscountImpl(Year.parse("2000"), -10);
 
     discountProvider.addDiscount(onYearDiscount);
 
@@ -205,7 +205,7 @@ public class CheckoutTests {
     book.add(new Book("The Terrible Privacy of Maxwell Sim", Year.parse("2010"), BigDecimal.valueOf(24.69)));
     book.add(new Book("Harry Squatter", Year.parse("2011"), BigDecimal.valueOf(50.00)));
 
-    Discount onYearDiscount = new OnYearImpl(Year.parse("2000"), 59);
+    Discount onYearDiscount = new OnYearDiscountImpl(Year.parse("2000"), 59);
 
     discountProvider.addDiscount(onYearDiscount);
 
