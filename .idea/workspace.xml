@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9d285e6-cf03-497b-a887-c40d5d3460ba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/Checkout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/bookshopautomation/CheckoutTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnTotalCostImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnTotalCostImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/bookshopautomation/CheckoutTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2DID05ANCsXmYE8KhUWcYAySO5z" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,6 +58,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Dev\BookShop\src\main\java\com\bookshopautomation\discountProvider\discountTypes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Dev\BookShop\src\test\java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.bookshopautomation.discountProvider" />
@@ -72,7 +82,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckoutTests.checkoutItems_GivenBooksOver30Pounds_ShouldApplyOnTotalDiscountCost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckoutTests.checkoutItems_GivenBookAfter2000_ShouldApplyOnYearDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookShop" />
       <extension name="coverage">
         <pattern>
@@ -82,23 +92,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.bookshopautomation" />
       <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
-      <option name="METHOD_NAME" value="checkoutItems_GivenBooksOver30Pounds_ShouldApplyOnTotalDiscountCost" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckoutTests.checkoutItems_GivenMixtureOfBooks_ShouldApplyCorrectDiscountCost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BookShop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.bookshopautomation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.bookshopautomation" />
-      <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
-      <option name="METHOD_NAME" value="checkoutItems_GivenMixtureOfBooks_ShouldApplyCorrectDiscountCost" />
+      <option name="METHOD_NAME" value="checkoutItems_GivenBookAfter2000_ShouldApplyOnYearDiscount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,13 +130,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BookShop [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CheckoutTests" />
+        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenBookAfter2000_ShouldApplyOnYearDiscount" />
+        <item itemvalue="Maven.BookShop [test]" />
         <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenMoreThanOneBookAfter2000_ShouldApplyOnYearDiscount" />
         <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenSingleBookAfter2000_ShouldApplyOnYearDiscount" />
-        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenBooksOver30Pounds_ShouldApplyOnTotalDiscountCost" />
-        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenMixtureOfBooks_ShouldApplyCorrectDiscountCost" />
       </list>
     </recent_temporary>
   </component>
