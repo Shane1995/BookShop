@@ -3,7 +3,7 @@ package com.bookshopautomation.discountProvider.discountTypes;
 import com.bookshopautomation.models.CheckoutOrder;
 import java.math.BigDecimal;
 
-public class OnTotalCostImpl extends Discount {
+public class OnTotalCostImpl implements Discount {
 
   private BigDecimal totalCostClause;
   private int discountPercentage = 5;

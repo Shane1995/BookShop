@@ -6,7 +6,7 @@ import com.bookshopautomation.models.CheckoutOrder;
 import java.math.BigDecimal;
 import java.time.Year;
 
-public class OnYearImpl extends Discount {
+public class OnYearImpl implements Discount {
 
   private Year yearClause;
   private int discountPercentage = 10;
