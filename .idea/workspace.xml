@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9d285e6-cf03-497b-a887-c40d5d3460ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/Checkout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/models/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/bookshopautomation/CheckoutTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
