@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9d285e6-cf03-497b-a887-c40d5d3460ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/bookshopautomation/CheckoutTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/exceptions/DiscountPercentageException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/validation/ValidatePercentage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookShop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BookShop.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/Checkout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/DiscountBookProviderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/DiscountBookProviderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/Discount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnTotalCostImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnTotalCostImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/bookshopautomation/CheckoutTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnYearImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnYearImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/models/CheckoutOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/models/CheckoutOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/bookshopautomation/CheckoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bookshopautomation/CheckoutTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckoutTests.checkoutItems_GivenMoreThanOneBookAfter2000_ShouldApplyOnYearDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckoutTests.checkoutItems_GivenInvalidHighBoundPercentage_ShouldThrowDiscountPercentageException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookShop" />
       <extension name="coverage">
         <pattern>
@@ -108,13 +114,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.bookshopautomation" />
       <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
-      <option name="METHOD_NAME" value="checkoutItems_GivenMoreThanOneBookAfter2000_ShouldApplyOnYearDiscount" />
+      <option name="METHOD_NAME" value="checkoutItems_GivenInvalidHighBoundPercentage_ShouldThrowDiscountPercentageException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckoutTests.checkoutItems_GivenSingleBookAfter2000_ShouldApplyOnYearDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckoutTests.checkoutItems_GivenInvalidLowerBoundPercentage_ShouldThrowDiscountPercentageException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookShop" />
       <extension name="coverage">
         <pattern>
@@ -124,44 +130,35 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.bookshopautomation" />
       <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
-      <option name="METHOD_NAME" value="checkoutItems_GivenSingleBookAfter2000_ShouldApplyOnYearDiscount" />
+      <option name="METHOD_NAME" value="checkoutItems_GivenInvalidLowerBoundPercentage_ShouldThrowDiscountPercentageException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BookShop [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="test" />
-              </list>
-            </option>
-            <option name="pomFileName" value="pom.xml" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
+    <configuration name="CheckoutTests.checkoutItems_GivenValidPercentage_ShouldThrowDiscountPercentageException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bookshopautomation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bookshopautomation" />
+      <option name="MAIN_CLASS_NAME" value="com.bookshopautomation.CheckoutTests" />
+      <option name="METHOD_NAME" value="checkoutItems_GivenValidPercentage_ShouldThrowDiscountPercentageException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CheckoutTests" />
+        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenValidPercentage_ShouldThrowDiscountPercentageException" />
+        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenInvalidLowerBoundPercentage_ShouldThrowDiscountPercentageException" />
+        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenInvalidHighBoundPercentage_ShouldThrowDiscountPercentageException" />
         <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenBookAfter2000_ShouldApplyOnYearDiscount" />
-        <item itemvalue="Maven.BookShop [test]" />
-        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenMoreThanOneBookAfter2000_ShouldApplyOnYearDiscount" />
-        <item itemvalue="JUnit.CheckoutTests.checkoutItems_GivenSingleBookAfter2000_ShouldApplyOnYearDiscount" />
       </list>
     </recent_temporary>
   </component>

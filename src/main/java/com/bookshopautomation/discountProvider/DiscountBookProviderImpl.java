@@ -7,7 +7,7 @@ import java.util.List;
 
 public class DiscountBookProviderImpl implements DiscountProvider{
 
-  private List<Discount> discounts;
+  private final List<Discount> discounts;
 
   public DiscountBookProviderImpl() {
     this.discounts = new ArrayList<>();

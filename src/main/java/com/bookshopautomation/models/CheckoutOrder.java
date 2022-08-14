@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class CheckoutOrder {
-  private List<Book> items;
-  private BigDecimal totalPrice;
+  private final List<Book> items;
+  private final BigDecimal totalPrice;
 
   public CheckoutOrder(List<Book> items, BigDecimal totalPrice) {
     this.items = items;

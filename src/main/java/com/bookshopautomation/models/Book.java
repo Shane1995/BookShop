@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 import java.time.Year;
 
 public class Book {
-  private String title;
-  private Year year;
-  private BigDecimal price;
+  private final String title;
+  private final Year year;
+  private final BigDecimal price;
 
   public Book(String title, Year year, BigDecimal price) {
     this.title = title;
