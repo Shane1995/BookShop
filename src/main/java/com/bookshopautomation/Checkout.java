@@ -2,6 +2,7 @@ package com.bookshopautomation;
 
 import com.bookshopautomation.discountProvider.DiscountProvider;
 import com.bookshopautomation.discountProvider.discountTypes.Discount;
+import com.bookshopautomation.discountProvider.exceptions.DiscountPercentageException;
 import com.bookshopautomation.models.Book;
 import com.bookshopautomation.models.CheckoutOrder;
 
@@ -16,7 +17,7 @@ public class Checkout {
     this.discountProvider = discountProvider;
   }
 
-  public BigDecimal checkoutItems(List<Book> books) {
+  public BigDecimal checkoutItems(List<Book> books) throws DiscountPercentageException {
     BigDecimal rawTotalPrice = getRawTotalPrice(books);
     CheckoutOrder checkoutOrder = new CheckoutOrder(books, rawTotalPrice);
 
@@ -33,7 +34,7 @@ public class Checkout {
     return rawTotalPrice;
   }
 
-  private BigDecimal calculateFinalTotalPrice(CheckoutOrder checkoutOrder) {
+  private BigDecimal calculateFinalTotalPrice(CheckoutOrder checkoutOrder) throws DiscountPercentageException {
     List<Discount> discounts = discountProvider.getDiscounts();
 
     for (Discount discount: discounts) {

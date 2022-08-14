@@ -1,5 +1,7 @@
 package com.bookshopautomation.discountProvider.discountTypes;
 
+import com.bookshopautomation.discountProvider.exceptions.DiscountPercentageException;
+import com.bookshopautomation.discountProvider.validation.ValidatePercentage;
 import com.bookshopautomation.models.CheckoutOrder;
 import java.math.BigDecimal;
 
@@ -24,7 +26,9 @@ public class OnTotalCostImpl implements Discount {
   }
 
   @Override
-  public CheckoutOrder applyCondition(CheckoutOrder checkoutOrder) {
+  public CheckoutOrder applyCondition(CheckoutOrder checkoutOrder) throws DiscountPercentageException {
+
+    ValidatePercentage.allCasesValid(discountPercentage);
 
     if (checkoutOrder.getTotalPrice().longValue() < totalCostClause.longValue()){
       return checkoutOrder;

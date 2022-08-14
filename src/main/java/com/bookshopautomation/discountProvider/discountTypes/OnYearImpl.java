@@ -1,9 +1,12 @@
 package com.bookshopautomation.discountProvider.discountTypes;
 
+import com.bookshopautomation.discountProvider.exceptions.DiscountPercentageException;
+import com.bookshopautomation.discountProvider.validation.ValidatePercentage;
 import com.bookshopautomation.models.Book;
 import com.bookshopautomation.models.CheckoutOrder;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.Year;
 
 public class OnYearImpl implements Discount {
@@ -18,6 +21,7 @@ public class OnYearImpl implements Discount {
 
   @Override
   public void setDiscountPercentage(int percentage) {
+
     this.discountPercentage = percentage;
   }
 
@@ -27,12 +31,14 @@ public class OnYearImpl implements Discount {
   }
 
   @Override
-  public CheckoutOrder applyCondition(CheckoutOrder checkoutOrder) {
+  public CheckoutOrder applyCondition(CheckoutOrder checkoutOrder) throws DiscountPercentageException {
+    ValidatePercentage.allCasesValid(discountPercentage);
+
     BigDecimal deductibleDiscountTotal = new BigDecimal("00");
 
     for (Book book:checkoutOrder.getItems()) {
       if (book.getYear().isAfter(yearClause)) {
-        deductibleDiscountTotal = deductibleDiscountTotal.add(book.getPrice().divide(BigDecimal.valueOf(discountPercentage)));
+        deductibleDiscountTotal = deductibleDiscountTotal.add(book.getPrice().divide(BigDecimal.valueOf(discountPercentage),3, RoundingMode.HALF_DOWN));
       }
     }
 
