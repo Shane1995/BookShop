@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9d285e6-cf03-497b-a887-c40d5d3460ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/onTitleDiscountImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/Discount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/Discount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnTotalCostDiscountImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnTotalCostDiscountImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnYearDiscountImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/OnYearDiscountImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/onTitleDiscountImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bookshopautomation/discountProvider/discountTypes/onTitleDiscountImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
