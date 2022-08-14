@@ -8,8 +8,13 @@ import java.time.Year;
 
 public class OnYearImpl extends Discount {
 
-  private Year yearClause = Year.parse("2000");
+  private Year yearClause;
   private int discountPercentage = 10;
+
+  public OnYearImpl(Year yearClause, int discountPercentage) {
+    this.yearClause = yearClause;
+    this.discountPercentage = discountPercentage;
+  }
 
   @Override
   public void setDiscountPercentage(int percentage) {

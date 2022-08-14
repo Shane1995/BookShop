@@ -5,8 +5,13 @@ import java.math.BigDecimal;
 
 public class OnTotalCostImpl extends Discount {
 
-  private BigDecimal totalCostClause = BigDecimal.valueOf(30);
+  private BigDecimal totalCostClause;
   private int discountPercentage = 5;
+
+  public OnTotalCostImpl(BigDecimal totalCostClause, int discountPercentage) {
+    this.totalCostClause = totalCostClause;
+    this.discountPercentage = discountPercentage;
+  }
 
   @Override
   public void setDiscountPercentage(int percentage) {
@@ -20,6 +25,10 @@ public class OnTotalCostImpl extends Discount {
 
   @Override
   public CheckoutOrder applyCondition(CheckoutOrder checkoutOrder) {
+
+    if (checkoutOrder.getTotalPrice().longValue() < totalCostClause.longValue()){
+      return checkoutOrder;
+    }
 
     float percentage = discountPercentage/100f;
 
